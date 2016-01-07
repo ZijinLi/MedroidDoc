@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="xhr.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="marginal/marginal-position.js"></script>
+    <script type="application/javascript" src="js/index_init_services.js"></script>
+    <script type="application/javascript" src="js/index_uib_w_8_popover.js"></script>
+    <script type="application/javascript" src="js/index_uib_w_10_popover.js"></script>
+    <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+    <script type="application/javascript" src="sidebar/js/swipe.js"></script>
+    <script type="application/javascript" src="js/app.js"></script>
+    <script type="application/javascript" src="js/init-app.js"></script>
+    <script type="application/javascript" src="popup/popup.min.js"></script>
+    <script type="application/javascript" src="js/index_user_scripts.js"></script>
+    <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+    <script type="application/javascript" src="js/index_uib_w_13_popup.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+
+    <div class="upage" id="mainpage">
+      <div class="upage-outer content-area vertical-col left fixed-header-footer">
+        <div id="page_28_32" class="upage-content vertical-col left ">
+          <template class="uib-ionic-popup widget uib_w_13 d-margins" data-uib="ionic/popup" data-ver="0"></template>
+        </div>
+        <ion-header-bar class="bar inner-element uib_w_1 bar-balanced bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+          <div class="buttons widget-container content-area horiz-area wrapping-col">
+            <button class="button widget uib_w_2 ion d-margins button-clear ion-android-more icon-right" data-uib="ionic/button" data-ver="0"></button>
+          </div>
+          <h1 class="title">Medroid</h1>
+          <div class="buttons widget-container content-area horiz-area wrapping-col">
+            <button class="button widget uib_w_7 ion ion-android-reminder icon-right d-margins" data-uib="ionic/button" data-ver="0" id="notifications"></button>
+            <button class="button widget uib_w_6 ion d-margins ion-android-forums icon-right" data-uib="ionic/button" data-ver="0" id="inbox" ng-controller="uib_w_8_popover_controller" ng-click="show($event)"></button>
+            <button class="button widget uib_w_5 button-large ion ion-android-data icon-left d-margins" data-uib="ionic/button" data-ver="0" id="status" ng-controller="uib_w_13_popup_controller" ng-click="show()">Busy</button>
+          </div>
+          <div class="inner-element uib_w_14 uib_sidebar leftbar bar-bg thumb-bg bar-gutter height" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200}">
+            <div class="sidebar-content content-area vertical-col">
+
+            </div>
+          </div>
+
+        </ion-header-bar>
+
+        <div class="uib-ionic-popover hidden inner-element uib_w_8 d-margins" data-uib="ionic/popover" data-ver="0">
+          <ion-popover-view>
+            <ion-header-bar class="bar inner-element uib_w_9 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+              <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+              <h1 class="title">Inbox</h1>
+              <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+            </ion-header-bar>
+            <ion-content>
+              <div class="content-area vertical-col">
+              </div>
+            </ion-content>
+          </ion-popover-view>
+        </div>
+        <div class="uib-ionic-popover hidden inner-element uib_w_10 d-margins" data-uib="ionic/popover" data-ver="0">
+          <ion-popover-view>
+            <ion-header-bar class="bar inner-element uib_w_11 bar-positive bar-header" data-uib="ionic/header" data-ver="0">
+              <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+              <h1 class="title">Notifications</h1>
+              <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+            </ion-header-bar>
+            <ion-content>
+              <div class="content-area vertical-col">
+              </div>
+            </ion-content>
+          </ion-popover-view>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
